@@ -32,12 +32,12 @@ int main() {
   // Note: this automatically stores the string "world" in static memory
   //       but static memory is immutable, so you may need to copy it
   //       to the stack or the heap
-  char static_world_str = "world";
+  char* static_world_str = "world";
 
   // TODO: use strcpy and static_world_str to store "world" into world_str
   // Hint: strcpy takes two arguments:
   //       first the destination, then the source
-  strcopy(world_str, static_world_str);
+  strcpy(world_str, static_world_str);
 
   // Prints world_str
   printf("prints world: %s\n", world_str);
@@ -54,16 +54,16 @@ int main() {
 
   // TODO: use strcpy and hello_str to store
   //       the string "hello" into hello_world_str
-  strcopy(hello, );
+  strcpy(hello_world_str, hello_str);
 
   // TODO: store the space character in "hello world" at the correct index
   // Note: a space is not the same as null terminator
   //       a null terminator is represented by '\0'
-  ______ = ' ';
+  hello_world_str[5] = ' ';
 
   // TODO: use strcpy, pointer arithmetic, and world_str to store
   //       the string "world" into hello_world_str
-  ______(______ + ______, ______);
+  strcpy(hello_world_str + 6, world_str);
 
   // Prints hello_world_str
   printf("prints hello world: %s\n", hello_world_str);
